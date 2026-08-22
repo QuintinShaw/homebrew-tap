@@ -4,13 +4,13 @@
 class Openasr < Formula
   desc "Local-first, fail-closed speech-to-text CLI (no cloud, no telemetry)"
   homepage "https://github.com/QuintinShaw/openasr"
-  version "0.1.32"
+  version "0.1.36"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/QuintinShaw/openasr/releases/download/v#{version}/openasr-#{version}-macos-arm64.tar.gz"
-      sha256 "3004a5043c926ab01704c026656fa91754f2b8d373f4d6e716ab61298ec889a1"
+      sha256 "1fc36695424beb55dc79eefe9c4ed602689955e5b4f6e986d338b11bb453203f"
     else
       odie "openasr tap currently ships macOS arm64 (Apple Silicon) only; download an x86_64 build from https://github.com/QuintinShaw/openasr/releases"
     end
@@ -19,10 +19,10 @@ class Openasr < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/QuintinShaw/openasr/releases/download/v#{version}/openasr-#{version}-linux-arm64.tar.gz"
-      sha256 "4751ae8abe75c3dddd4e991cadae26484b54414013fdd23ddfd8b9f0bdeac7fd"
+      sha256 "b9616d80596acce2648b5a1631b775e02084e85270b3b0e9dcc19d6d3f3f266c"
     else
       url "https://github.com/QuintinShaw/openasr/releases/download/v#{version}/openasr-#{version}-linux-x86_64.tar.gz"
-      sha256 "fcb3fa00add12a9129189a7280ff17336b978fd0336e56d85ebc3871f74eaef1"
+      sha256 "7032a0129d530d9501e6956146625d939c3b4970bb0770e32f1fabe2c9a975bb"
     end
   end
 
